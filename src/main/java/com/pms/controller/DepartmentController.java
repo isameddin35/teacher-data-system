@@ -14,7 +14,7 @@ import java.util.List;
 public class DepartmentController {
     private final DepartmentService departmentService;
 
-    @PostMapping("get-students/{id}")
+    @GetMapping("get-students/{id}")
     public List<Student> getStudents(@PathVariable("id") Long id) {
         return departmentService.getStudents(id);
     }
