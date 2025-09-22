@@ -15,6 +15,11 @@ public class AuthController {
 
     private final AuthService authService;
 
+    @GetMapping
+    public String greet() {
+        return "Hello PMS";
+    }
+
     @PostMapping("/login")
     public ResponseEntity<String> login(@RequestBody User credentials) {
         String username = credentials.getUsername();
